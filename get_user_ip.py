@@ -12,6 +12,6 @@ def get_ip():
     result.append(user_ip)
     return result
 
-#  阿什顿发斯蒂芬咕咕咕咕
+#  阿什顿发斯蒂芬
 for item in get_ip():
     print(item)
