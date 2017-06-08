@@ -16,7 +16,3 @@ def get_ip():
 #  阿什顿发斯蒂芬
 for item in get_ip():
     print(item)
-
-
-def bb():
-    pass
