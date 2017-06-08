@@ -13,6 +13,6 @@ def get_ip():
     return result
 
 
-#  阿什顿发斯蒂芬
+#  阿什顿发斯 
 for item in get_ip():
     print(item)
