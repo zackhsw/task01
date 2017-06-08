@@ -1,4 +1,5 @@
 import pymysql
+import search_paths
 from builtins import int
 
 # 连接数据库
@@ -12,9 +13,15 @@ cursor = conn.cursor()
 
 sql = "select * from files_drc"
 sql_desc = "desc files_drc"
-sql_insert = "insert into files_drc values ('asdfas23','ww','aa\/bb\/','333','docx',null)"
+sql_insert = "insert into files_drc values (%s,%s,%s,%s,%s,%x)"
+list_insert = [('asdf111', 'ww', 'aa\/bb\/', '333', 'docx', ""),
+               ('asdf222', 'ee', 'aa\/bb\/', '222', 'docx', "")]
 
-cursor.execute(sql_insert)
+def register_drc():
+    with open('E:\\info.txt', 'r+') as fp:
+            for line in fp:
+                print(line)
+cursor.executemany(sql_insert, list_insert)
 
 cursor.execute(sql_desc)
 
